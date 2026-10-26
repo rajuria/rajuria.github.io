@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suika Game Clone</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Suika Game 🍉</h1>
-  <div id="scoreDisplay">Score: 0</div>
-  <div id="nextFruitContainer">
-  <p>Next Fruit:</p>
-  <canvas id="nextFruitCanvas" width="80" height="80"></canvas>
-  </div>
-  <canvas id="gameCanvas" width="300" height="500"></canvas>
-  <button id="restartBtn" style="display:none;">Restart</button>
-  <script src="game.js"></script>
-</body>
-</html>
+# rajuria.github.io
+
+My personal site, hosted with GitHub Pages at https://rajuria.github.io/
+
+| Project | Link | Source |
+|---|---|---|
+| Landing page | https://rajuria.github.io/ | `index.html` |
+| Suika Game | https://rajuria.github.io/suika/ | `suika/` |
+| Workout Tracker | https://rajuria.github.io/workout-tracker/ | [rajuria/workout-tracker](https://github.com/rajuria/workout-tracker) |
+
+To add a project, put it in its own folder (or its own repository with Pages enabled)
+and add a tile for it in `index.html`.

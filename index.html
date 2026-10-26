@@ -1,20 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suika Game Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rajuria · Projects</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <style>
+    :root {
+      --bg: #f6f5fa; --card: #ffffff; --text: #1d1b26; --muted: #6b6878;
+      --border: #e3e0ea; --accent: #5b5bd6; --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121118; --card: #1d1b26; --text: #eceaf3; --muted: #9a96a8;
+        --border: #2c2a38; --accent: #9d9dff; --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+    header h1 { font-size: 2rem; margin: 0 0 4px; }
+    header p { color: var(--muted); margin: 0 0 32px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .project {
+      display: flex; flex-direction: column; gap: 6px; padding: 20px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      box-shadow: var(--shadow); color: inherit; text-decoration: none;
+      transition: transform .15s, border-color .15s;
+    }
+    .project:hover, .project:focus-visible { transform: translateY(-2px); border-color: var(--accent); outline: none; }
+    .project .icon { font-size: 2.4rem; line-height: 1; margin-bottom: 6px; }
+    .project h2 { font-size: 1.15rem; margin: 0; }
+    .project p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .project .go { margin-top: auto; padding-top: 10px; color: var(--accent); font-weight: 600; font-size: .9rem; }
+    footer { margin-top: 48px; color: var(--muted); font-size: .85rem; }
+    footer a { color: inherit; }
+  </style>
 </head>
 <body>
-  <h1>Suika Game 🍉</h1>
-  <div id="scoreDisplay">Score: 0</div>
-  <div id="nextFruitContainer">
-  <p>Next Fruit:</p>
-  <canvas id="nextFruitCanvas" width="80" height="80"></canvas>
-  </div>
-  <canvas id="gameCanvas" width="300" height="500"></canvas>
-  <button id="restartBtn" style="display:none;">Restart</button>
-  <script src="game.js"></script>
+  <main>
+    <header>
+      <h1>Projects</h1>
+      <p>Little apps and games I'm building. Pick one to launch.</p>
+    </header>
+
+    <div class="grid">
+      <!-- To add a project: copy one <a class="project"> block and change the link, icon and text -->
+      <a class="project" href="workout-tracker/">
+        <span class="icon">🏋️</span>
+        <h2>Workout Tracker</h2>
+        <p>Generate workouts by muscle, log sets, rest timer, and a cheering mascot.</p>
+        <span class="go">Launch →</span>
+      </a>
+
+      <a class="project" href="suika/">
+        <span class="icon">🍉</span>
+        <h2>Suika Game</h2>
+        <p>Drop fruits, merge matching ones, and try to make a watermelon.</p>
+        <span class="go">Play →</span>
+      </a>
+    </div>
+
+    <footer>
+      <a href="https://github.com/rajuria">github.com/rajuria</a>
+    </footer>
+  </main>
 </body>
 </html>
